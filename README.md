@@ -3,7 +3,8 @@
 <sup><sub>Nathan Bommezijn | 500778928 | Information Design | Tech Track 20-21</sup></sub>
 
 ## Description
-
+This seminar will be about manipulating data from a dirty dataset and cleaning it with the functional programming paradigm.
 ## How to run
 
 ## License
+This repository is licensed as [GNU v3.0](https://github.com/bommezijn/functional-programming/blob/main/LICENSE) by [Nathan Bommezijn](Nathan Bommezijn), 2021.
