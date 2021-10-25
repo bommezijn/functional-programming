@@ -1,12 +1,17 @@
 /* 
-TODO
-[ ]
-[ ]
-[ ]
-*/
+TO DO
+[] Lowercase all textual answers
+[] replace undefined with 'nvt'
+[] format dates to american date
+[] Fix the code to be up to code standards (never change initial datasets)
 
+formulate an answer e.g. person has COLOR eyes and wants to become a FUTUREJOB
+COLOR eyes likes to eat / drink Dairy in the DIRECTION WIND.
+
+*/
 // Initializing hoisted variables
 const DATASET = require('./tech-track-dataset.json')
+const PROCESS = require('./process.json')
 
 // Count amount entries
 function countAllEntries() {
@@ -25,18 +30,20 @@ function getSpecificDataValue(key, value) {
   return DATASET[key][value]
 }
 
+const getAllValues = (question) => {
+  let permutableData = Object.assign({}, DATASET);
+  // console.log(permutableData)
+  return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
+}
+
 const toLowerCase = data => {
   return data.toLowerCase()
 }
 
-const getAllValues = (question) => {
-  // return DATASET[question]
-  // const map = new Map(Object.entries(DATASET));
-  // console.log(map)
-  // return DATASET.entries(question)
-  return Object.entries(DATASET).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
+const fixEmptyEntry = data => {
+  
 }
 
 // getSpecificDataValue(31, "Kies zelf of je deze vraag beantwoord.")
 countAllEntries()
-console.log(getAllValues('Wat is je favoriete soort huisdier?'))
+console.log(getAllValues('Als je later een auto zou kopen, van welk merk zou deze dan zijn?'))
