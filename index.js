@@ -14,10 +14,8 @@
 const DATASET = require('./tech-track-dataset.json')
 const PROCESS = require('./process.json')
 
-
-
 // Count amount entries
-function countAllEntries() {
+function countAmountEntries() {
   return console.log(`Er zijn ${DATASET.length} entries`)
 }
 
@@ -40,18 +38,17 @@ function getSpecificDataValue(key, value) {
 /* Get all entries with specific question
 Currently console logs instead of returning it
 */
-const getAllValues = (question) => {
+const getAllValuesFromQuestion = (question) => {
   let permutableData = Object.assign({}, DATASET);
   // console.log(permutableData)
   return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
 }
 
-function test(question) {
-  let permutableData = Object.assign({}, DATASET);
-  // console.log(Object.values(permutableData))
-  DATASET.map(
-    // For each element in the JSON FILE DO X
-    x => {console.log(`${toLowerCase(Object.values(x))}`)}
+
+//replace empty answers
+const fillEmptyResponse = (dataset) => {
+  return dataset.map(
+    test => {return Object.values(test)}
   )
 }
 
@@ -60,6 +57,6 @@ const toLowerCase = data => {
   return data.toLowerCase()
 }
 
+console.log(fillEmptyResponse(DATASET))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
 // readOneFullObject(DATASET)
-test()
