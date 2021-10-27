@@ -20,4 +20,4 @@ This seminar will be about manipulating data from a dirty dataset and cleaning i
 - [ ] Write process on the daily
   - [ ] clear and concise documentation with examples
 ## License
-This repository is licensed as [GNU v3.0](https://github.com/bommezijn/functional-programming/blob/main/LICENSE) by [Nathan Bommezijn](Nathan Bommezijn), 2021.
+This repository is licensed as [GNU v3.0](https://github.com/bommezijn/functional-programming/blob/main/LICENSE) by [Nathan Bommezijn](https://github.com/bommezijn), 2021.
