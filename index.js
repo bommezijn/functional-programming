@@ -60,22 +60,25 @@ const getAllValuesFromQuestion = (question) => {
 //replace empty answers
 const fillEmptyResponse = (dataset) => {
   return dataset.map(
-    test => {
-      console.log(typeof(test))
-      // test.forEach(element => {
-      //   element.toLowerCase()
-      // });
-      return test
+    objectWithFormData => {
+      for (const key in objectWithFormData) {
+        if (Object.hasOwnProperty.call(objectWithFormData, key)) {
+          const element = objectWithFormData[key];
+          if (typeof(element) === 'string') {
+            return objectWithFormData[key].toLowerCase() //when returning I will only get kat and hond...
+          }
+        }
+      }
     }
   )
 }
 
-// Transform data to lowercase
-const toLowerCase = data => {
-  return data.toLowerCase()
-}
+// // Transform data to lowercase
+// const toLowerCase = data => {
+//   return data.toLowerCase()
+// }
 
 console.log(fillEmptyResponse(SAMPLE))
-console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
+// console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
 // readOneFullObject(DATASET)
