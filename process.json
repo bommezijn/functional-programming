@@ -9,6 +9,12 @@
     "date": "2021-10-26",
     "title": "nvt",
     "content": "Kiara uitgelegd hoe het zit met require paden en vervolgens een poging gedaan om verder te werken aan de functional programming patterns om de dataset op te schonen. Vandaag had ik moeite met het bedenken van logica omdat ik eigenlijk ieder object wil opschonen. Ik denk dat ik wellicht de theorie over de functional programming paradigm opnieuw moet doorlezen en een refresh course moet volgen.",
+    "rating": 6
+  },
+  {
+    "date": "2021-10-27",
+    "title": "Wiki galore",
+    "content": "Today was more or less crazy wiki action, i wrote most of the functional programming theory and content today and read and watched some theory about it to improve my understanding more. Besides that I played with fetch because it would be ideal for API calling. But decided to get it working isn't worth the time and effort with local files when API calling would be much easier without the extra's for this.",
     "rating": 7
   }
 ]
