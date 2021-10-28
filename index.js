@@ -65,7 +65,7 @@ const fillEmptyResponse = (dataset) => {
         if (Object.hasOwnProperty.call(objectWithFormData, key)) {
           const element = objectWithFormData[key];
           if (typeof(element) === 'string') {
-            return objectWithFormData[key].toLowerCase() //when returning I will only get kat and hond...
+            console.log( objectWithFormData[key].toLowerCase() )//when returning I will only get kat and hond...
           }
         }
       }
@@ -78,7 +78,13 @@ const fillEmptyResponse = (dataset) => {
 //   return data.toLowerCase()
 // }
 
+const removeSymbols = (string) => {
+  const REGEX = /.?!:/;
+  return string.replaceAll(regex, '')
+}
+
 console.log(fillEmptyResponse(SAMPLE))
 // console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
 // readOneFullObject(DATASET)
+
