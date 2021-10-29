@@ -79,11 +79,12 @@ const fillEmptyResponse = (dataset) => {
 // }
 
 const removeSymbols = (string) => {
-  const REGEX = /.?!:/;
-  return string.replaceAll(regex, '')
+  const regex = /[[:punct:]]/g;
+  return string.replaceAll(regex, ''); //replace not working cuz of Node versioning, attempt after an update to v15
 }
 
-console.log(fillEmptyResponse(SAMPLE))
+console.log(removeSymbols('Hello!?areyou there...'))
+// console.log(fillEmptyResponse(SAMPLE))
 // console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
 // readOneFullObject(DATASET)
