@@ -1,12 +1,6 @@
 /* 
   formulate an answer e.g. person has COLOR eyes and wants to become a FUTUREJOB
   COLOR eyes likes to eat / drink Dairy in the DIRECTION WIND.
-
-  TO DO
-  [] Lowercase all textual answers
-  [] replace undefined with 'nvt'
-  [] format dates to american date
-  [] Fix the code to be up to code standards (never change initial datasets)
 */
 
 // Initializing hoisted variables
@@ -14,11 +8,30 @@ const DATASET = require('./tech-track-dataset.json')
 const SAMPLE = require('./sample.json')
 
 /**
+ * @title Replace uppercase with lowercase
+ * @param {String} string value in string format
+ * @returns string in all lowercase
+ */
+ const toLowerCase = (string) => {
+  return string.toLowerCase()
+}
+
+/**
+ * @title Remove symbols from string
+ * @param {String} string value in string format
+ * @returns string without symbols
+ */
+const removeSymbols = (string) => {
+  const REGEX = /[^A-Za-z0-9\s]/g;
+  return string.replaceAll(REGEX, ''); //replace not working cuz of Node versioning, attempt after an update to v15
+}
+
+/**
  * @title Count the amount of entries
  * @param {JSON} dataset JSON format file
  * @returns {string} string amount of entries
  */
-function countAmountEntries(dataset) {
+const countAmountEntries = (dataset) => {
   return console.log(`Er zijn ${dataset.length} entries`)
 }
 
@@ -32,11 +45,6 @@ function readOneFullObject(data) {
   return data[0]
 }
 
-// function printAll(data) {
-//   return Object.entries(data).forEach(([key, value]) => console.log(``))
-// }
-
-// Get specific object's question
 /**
  * @title Get a specific form's question response back.
  * @param {Number} key Which object you specifically want
@@ -47,17 +55,18 @@ function getSpecificDataValue(key, value) {
   return DATASET[key][value]
 }
 
+
+
 /* Get all entries with specific question
 Currently console logs instead of returning it
 */
 const getAllValuesFromQuestion = (question) => {
   let permutableData = Object.assign({}, DATASET);
   // console.log(permutableData)
-  return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
+  // return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`)
 }
 
-
-//replace empty answers
+//replace empty answers || Not just empty answers anymore
 const fillEmptyResponse = (dataset) => {
   return dataset.map(
     objectWithFormData => {
@@ -73,19 +82,10 @@ const fillEmptyResponse = (dataset) => {
   )
 }
 
-// // Transform data to lowercase
-// const toLowerCase = data => {
-//   return data.toLowerCase()
-// }
 
-const removeSymbols = (string) => {
-  const regex = /[[:punct:]]/g;
-  return string.replaceAll(regex, ''); //replace not working cuz of Node versioning, attempt after an update to v15
-}
-
-console.log(removeSymbols('Hello!?areyou there...'))
 // console.log(fillEmptyResponse(SAMPLE))
 // console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
-// readOneFullObject(DATASET)
+// readOneFullObject(SAMPLE)
+console.log(getAllValuesFromQuestion('Wat is je favoriete soort huisdier?'))
 
