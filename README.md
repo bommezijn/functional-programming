@@ -16,6 +16,12 @@ This course is specifically given by the Hogeschool van Amsterdam CMD. More info
 - Cleaning dirty data for consumption
 - <span style="color:red">More coming...</span>
 
+### Upcoming features
+- [ ] Lowercase all textual answers
+- [ ] replace undefined with 'nvt'
+- [ ] format dates to american date
+- [ ] Fix the code to be up to code standards <sup>(never change initial datasets)</sup>
+- [ ] Refactor code with promises
 
 ## Demo
 
