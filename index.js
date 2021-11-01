@@ -63,7 +63,7 @@ Currently console logs instead of returning it
 const getAllValuesFromQuestion = (question) => {
   let permutableData = Object.assign({}, DATASET);
   // console.log(permutableData)
-  // return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`)
+  return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
 }
 
 //replace empty answers || Not just empty answers anymore
@@ -82,10 +82,21 @@ const fillEmptyResponse = (dataset) => {
   )
 }
 
+/**
+ * @title Remove empty values within or leave it alone
+ * @param {String} string value that is of type string but empty 
+ * @returns A filled response
+ */
+const replaceEmptyValue = (string) => {
+  return string == '' ? string = "nvt" : string = string
+}
+
+console.log(replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
 
 // console.log(fillEmptyResponse(SAMPLE))
 // console.log(getSpecificDataValue(0,'Wat is je oogkleur?'))
 // getAllValues('Kies zelf of je deze vraag beantwoord.')
 // readOneFullObject(SAMPLE)
-console.log(getAllValuesFromQuestion('Wat is je favoriete soort huisdier?'))
-
+// console.log(getAllValuesFromQuestion('Wat is je favoriete soort huisdier?'))
+// console.log(getAllValuesFromQuestion('Kies zelf of je deze vraag beantwoord.'))
+// DeepDL translate color names to english names and convert to hex
