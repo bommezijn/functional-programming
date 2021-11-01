@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "HVA cmd tech track course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bommezijn/functional-programming.git"
+  },
+  "author": "Bommezijn",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/bommezijn/functional-programming/issues"
+  },
+  "homepage": "https://github.com/bommezijn/functional-programming#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "standard": "^16.0.4"
+  }
+}
