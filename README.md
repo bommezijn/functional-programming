@@ -1,6 +1,7 @@
 
 <!-- Add badges from somewhere like: [shields.io](https://shields.io/) -->
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 
 # Functional Programming
 
@@ -14,6 +15,7 @@ This course is specifically given by the Hogeschool van Amsterdam CMD. More info
 
 - Functional programming paradigm
 - Cleaning dirty data for consumption
+- Linting with [Standard](https://github.com/standard)
 - <span style="color:red">More coming...</span>
 
 ### Upcoming features
@@ -52,6 +54,11 @@ Start the server
 
 ```bash
   npm run start
+```
+
+To check for linting errors
+```bash
+npm run lint
 ```
 
 
