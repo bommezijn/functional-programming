@@ -4,7 +4,9 @@
   "description": "HVA cmd tech track course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "standard && node index.js"
   },
   "repository": {
     "type": "git",
