@@ -1,3 +1,8 @@
+/* 
+  Written and shared by Robert Spier
+  https://github.com/roberrrt-s
+*/
+
 export const isString = (a) => typeof a === 'string';
 export const isEmptyString = (a) => isString(a) && a === '';
 export const isNonEmptyString = (a) => isString(a) && !isEmptyString(a);
