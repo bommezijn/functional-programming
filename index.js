@@ -66,22 +66,6 @@ const getAllValuesFromQuestion = (question) => {
   return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
 }
 
-//replace empty answers || Not just empty answers anymore
-const fillEmptyResponse = (dataset) => {
-  return dataset.map(
-    objectWithFormData => {
-      for (const key in objectWithFormData) {
-        if (Object.hasOwnProperty.call(objectWithFormData, key)) {
-          const element = objectWithFormData[key];
-          if (typeof(element) === 'string') {
-            console.log( objectWithFormData[key].toLowerCase() )//when returning I will only get kat and hond...
-          }
-        }
-      }
-    }
-  )
-}
-
 /**
  * @title Remove empty values within or leave it alone
  * @param {String} string value that is of type string but empty 
