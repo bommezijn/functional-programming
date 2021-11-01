@@ -27,6 +27,15 @@ const removeSymbols = (string) => {
 }
 
 /**
+ * @title Remove empty values within or leave it alone
+ * @param {String} string value that is of type string but empty 
+ * @returns A filled response
+ */
+ const replaceEmptyValue = (string) => {
+  return string == '' ? string = "nvt" : string = string
+}
+
+/**
  * @title Count the amount of entries
  * @param {JSON} dataset JSON format file
  * @returns {string} string amount of entries
@@ -55,8 +64,6 @@ function getSpecificDataValue(key, value) {
   return DATASET[key][value]
 }
 
-
-
 /* Get all entries with specific question
 Currently console logs instead of returning it
 */
@@ -66,14 +73,6 @@ const getAllValuesFromQuestion = (question) => {
   return Object.entries(permutableData).forEach(([key, value]) => console.log(`${key}, ${toLowerCase(value[question])}`))
 }
 
-/**
- * @title Remove empty values within or leave it alone
- * @param {String} string value that is of type string but empty 
- * @returns A filled response
- */
-const replaceEmptyValue = (string) => {
-  return string == '' ? string = "nvt" : string = string
-}
 
 console.log(replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
 
