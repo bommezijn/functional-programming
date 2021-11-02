@@ -22,6 +22,7 @@ This course is specifically given by the Hogeschool van Amsterdam CMD. More info
 
 ## Demo
 Finished sanitization of the dataset
+
 <img width="497" alt="CleanShot 2021-11-02 at 13 17 15@2x" src="https://user-images.githubusercontent.com/13199349/139846511-e57403ab-12e5-49e5-82aa-b6ada430acbe.png">
 
 ## Technical requirements
