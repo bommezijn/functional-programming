@@ -62,5 +62,17 @@ sanitizeData()
   })
   .then(sanitizedData => {
     console.log(sanitizedData)
+    /* 
+    // Object in story format
+    return sanitizedData.map(obj => {
+      console.log(`persoon met oogkleur ${obj.oogkleur} vind zuivel product ${obj.zuivel} lekker in ${obj.wind} wind`)
+    })
+    */
+  })
+  .catch(error => {
+    console.error(error)
+  })
+  .finally(() => {
+    console.log(`%c sanitization is finished.`,`color:yellow; font-weight:bold;`)
   })
 // console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
