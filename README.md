@@ -22,7 +22,7 @@ This course is specifically given by the Hogeschool van Amsterdam CMD. More info
 
 ## Demo
 Finished sanitization of the dataset
-![Finished sanitization of the dataset](https://cleanshot-cloud-fra.s3.eu-central-1.amazonaws.com/media/4504/0yo1ppuGM97WkJ2y1cERY7AycVH8180MZp11eftz.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJGMEQCIHd1MJ2NzVtuTJu%2B%2BoND4UCxdbF6bhdKdm%2B6qJAH1u%2BGAiARLKVTHJWl%2Bh0orgz39nYF5sRMZ0jSFlMCqLeQqaMKRyqfAggtEAAaDDkxOTUxNDQ5MTY3NCIMCQreNKBj%2B%2BSeXQaaKvwB5hPvSKnXkisk1cjXjH4vGqT9a21Uso6xeA4egnCI2%2Bv2rbwQ84eXegm1j4IxrCBdZ21hZhMoCr4tBxCLRsDvrBVnnKvwSyJVatJcNiVse7KAAReIq%2Ffr3W6oe5J%2Bj3OjTw5i4E%2FL%2F29f%2FDQSGUy5m5546W9TO9RYFlIHScWwO8LBJzxwCWBFEEe7WLH0vyWA7ttu9UOywNhsAUFWpI8IxXk6a8xQaBXT3HQM26Guq27nb1kQaBuSytuImcHMNOeB1eS4qOWsfov0TnomO%2BdN9rD%2BgvnkZY8oBcJggmPm4N%2Ff3UsN1SCe%2BCQySa7myXcqUznl7pXdsoYHsI6wMLLZhIwGOpsBx0JbRjpfByyZoy92CY62Hn6LUsA59T7jdX4jzFUXiVRHw%2BdJK592zsWE6RBc1%2FKwy6ACktI5eQybu6xqlUid9Egkn4L7X%2FAFqy7ONoIpXN%2F%2B2Icg%2BU0oEumQtWMyE0jgx2tcTzA6jcHBiUwtS6Zt%2Fa41xaRsSJjUo%2F0yLNcECtOOT6V2waezBSeFzPMjABlzEUP6J9luQhmqWU4%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA5MF2VVMNFY3K6TXB%2F20211102%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20211102T122033Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=6420b51ec7a36909973e60a128436e7a2ee6addad73b4a0fa537115586842c71)
+<img width="497" alt="CleanShot 2021-11-02 at 13 17 15@2x" src="https://user-images.githubusercontent.com/13199349/139846511-e57403ab-12e5-49e5-82aa-b6ada430acbe.png">
 
 ## Technical requirements
 
