@@ -64,6 +64,8 @@ To check for linting errors
   npm run lint
 ```
 
+Alternatively, if you wanna run [fetch.js](fetch.js)
+
 
 ## Documentation
 
