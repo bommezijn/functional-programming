@@ -8,8 +8,9 @@ const utilities = require('./modules/util')
 const DATASET = require('./tech-track-dataset.json')
 const SAMPLE = require('./sample.json')
 
-/* Get all entries with specific question
-Currently console logs instead of returning it
+/* 
+  Get all entries with specific question
+  Currently console logs instead of returning it
 */
 const getAllValuesFromQuestion = (question) => {
   const permutableData = Object.assign({}, DATASET)
@@ -26,5 +27,40 @@ function getSpecificDataValue (key, value) {
   return DATASET[key][value]
 }
 
-// console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
+/*
+  Function that works with promises to clean the data. It retrieves the data and unleashes a scrubbing chain.
+  Promise chain is based on the chain @roberrrt-s wrote.
+  Promise eventually returns a new person object with the properties eyeColour, diary and wind direction.
+*/
+const sanitizeData = () => {
+  return new Promise((resolve, reject) => {
+    const dataset = DATASET
+    resolve(dataset)
+  })
+}
 
+sanitizeData()
+  .then((data) => {
+    return data.map(object => {
+      Object.keys(object).forEach(key => {
+        object[key] = utilities.toLowerCase(object[key])
+        object[key] = utilities.removeSymbols(object[key])
+        object[key] = utilities.replaceEmptyValue(object[key])
+      })
+      return object
+    })
+  })
+  .then((data) => {
+    return data.map(object => {
+      const person = {
+        oogkleur: object['Wat is je oogkleur?'],
+        zuivel: object['Wat is je favoriete zuivelproduct?'],
+        wind: object['Wat is je favoriete windrichting?']
+      }
+      return person
+    })
+  })
+  .then(sanitizedData => {
+    console.log(sanitizedData)
+  })
+// console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
