@@ -55,7 +55,7 @@ const countAmountEntries = (dataset) => {
  * @param {JSON} dataset JSON format file
  * @returns {Object} a single item from the file
  */
-function readOneFullObject (data) {
+const readOneFullObject = (data) => {
   console.log(data[0])
   return data[0]
 }
