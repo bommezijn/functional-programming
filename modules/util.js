@@ -2,6 +2,18 @@
   Utilities that can be used to clean data
   Written by @bommezijn
 */
+const fetch = require('cross-fetch')
+
+/**
+ * @title Retrieve data asynchronously from an online source with fetch
+ * @param {String} string URL to the API
+ * @returns {Object} Data object in JSON format
+ */
+const getData = async (URL) => {
+  return await fetch(URL)
+    .then(response => response.json())
+    .catch(error => console.error(error))
+}
 
 /**
  * @title Replace uppercase with lowercase
@@ -60,6 +72,7 @@ const readOneFullObject = (data) => {
   return data[0]
 }
 
+exports.getData = getData
 exports.readOneFullObject = readOneFullObject
 exports.countAmountEntries = countAmountEntries
 exports.replaceEmptyValue = replaceEmptyValue
