@@ -23,7 +23,7 @@ const getAllValuesFromQuestion = (question) => {
  * @param {String} value Question which you want the response from
  * @returns
  */
-function getSpecificDataValue (key, value) {
+const getSpecificDataValue = (key, value) => {
   return DATASET[key][value]
 }
 
