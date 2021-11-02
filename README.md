@@ -65,6 +65,9 @@ To check for linting errors
 ```
 
 Alternatively, if you wanna run [fetch.js](fetch.js)
+```bash
+  npm run fetch.js
+```
 
 
 ## Documentation
