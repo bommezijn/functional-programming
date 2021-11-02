@@ -9,7 +9,12 @@
  * @returns string in all lowercase
  */
 const toLowerCase = (string) => {
-  return string.toLowerCase()
+  // return string.toLowerCase()
+  if (typeof string === 'string') {
+    return string.toLowerCase()
+  } else {
+    return string
+  }
 }
 
 /**
@@ -19,7 +24,12 @@ const toLowerCase = (string) => {
  */
 const removeSymbols = (string) => {
   const REGEX = /[^A-Za-z0-9\s]/g
-  return string.replaceAll(REGEX, '') // replace not working cuz of Node versioning, attempt after an update to v15
+  // return string.replaceAll(REGEX, '') // replace not working cuz of Node versioning, attempt after an update to v15
+  if (typeof string === 'string') {
+    return string.replaceAll(REGEX, '')
+  } else {
+    return string
+  }
 }
 
 /**
