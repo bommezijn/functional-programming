@@ -75,9 +75,20 @@ const readOneFullObject = (data) => {
   return data[0]
 }
 
+const americanToUniversalDateFormat = (date) => {
+  let test = new Date(date)
+  console.log(test)
+  console.log(test.toLocaleDateString())
+  // console.log(test.toString(test.getDate(), test.getMonth(), test.getFullYear()))
+  // test.value.split("-").reverse().join("-"); 
+  // console.log(test)
+  return test
+}
+
 exports.getData = getData
 exports.readOneFullObject = readOneFullObject
 exports.countAmountEntries = countAmountEntries
 exports.replaceEmptyValue = replaceEmptyValue
 exports.removeSymbols = removeSymbols
 exports.toLowerCase = toLowerCase
+exports.americanToUniversalDateFormat = americanToUniversalDateFormat
