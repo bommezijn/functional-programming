@@ -11,7 +11,7 @@ const fetch = require('cross-fetch')
  */
 const getData = async (URL) => {
   try {
-    let response = await fetch(URL)
+    const response = await fetch(URL)
     return response.json()
   } catch (error) {
     console.error(error)
