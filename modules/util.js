@@ -77,16 +77,16 @@ const readOneFullObject = (data) => {
 }
 
 const isDate = (date) => {
-  return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
+  return (new Date(date) !== 'Invalid Date') && !isNaN(new Date(date))
 }
 
 /**
  * @title Convert date format to local date format.
- * @param {Date} date Date written in any manner, returns date in local date format. 
+ * @param {Date} date Date written in any manner, returns date in local date format.
  * @returns {String} local date format in the datatype string
  */
 const toLocalDateFormat = (date) => {
-  let checkDate = new Date(date)
+  const checkDate = new Date(date)
   return isDate(checkDate) ? checkDate.toLocaleDateString() : checkDate
 }
 

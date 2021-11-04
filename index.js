@@ -8,7 +8,6 @@ const utilities = require('./modules/util')
 const DATASET = require('./tech-track-dataset.json')
 const SAMPLE = require('./sample.json')
 
-
 /*
   Get all entries with specific question
   Currently console logs instead of returning it
