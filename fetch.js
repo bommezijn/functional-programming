@@ -13,12 +13,33 @@ const URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.en
 //   )
 
 /*  */
-const getCurrentlyPlaying = () => {
-  utilities.getData(URL)
-    .then(data => {
-      // console.log(Object.keys(data.results).length) //Get amount of movies currently playing
-      console.log(data.results)
-    })
+// const getCurrentlyPlaying = async () => {
+//   const data = await utilities.getData(URL)
+//   // console.log(data.results)
+//   return await data.results
+//     .then(data => {
+//       // console.log(Object.keys(data.results).length) //Get amount of movies currently playing
+//       // console.log(data.results)
+//       return data.results
+//     })
+// }
+
+/**
+ * @title get currently playing movies
+ * @returns data object of current listing of movies8
+ */
+const getCurrentlyPlaying = async () => {
+  const data = await utilities.getData(URL)
+  return data.results
 }
 
-getCurrentlyPlaying()
+/**
+ * @title msg function that 
+ * @returns a message in the console with the data
+ */
+const msg = async () => {
+  const msg = await getCurrentlyPlaying()
+  console.log(msg)
+}
+
+msg()
