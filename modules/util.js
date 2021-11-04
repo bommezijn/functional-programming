@@ -85,7 +85,7 @@ const isDate = (date) => {
  * @param {Date} date Date written in any manner, returns date in local date format. 
  * @returns {String} local date format in the datatype string
  */
-const americanToUniversalDateFormat = (date) => {
+const toLocalDateFormat = (date) => {
   let checkDate = new Date(date)
   return isDate(checkDate) ? checkDate.toLocaleDateString() : checkDate
 }
@@ -96,4 +96,4 @@ exports.countAmountEntries = countAmountEntries
 exports.replaceEmptyValue = replaceEmptyValue
 exports.removeSymbols = removeSymbols
 exports.toLowerCase = toLowerCase
-exports.americanToUniversalDateFormat = americanToUniversalDateFormat
+exports.toLocalDateFormat = toLocalDateFormat
