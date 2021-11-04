@@ -45,6 +45,7 @@ const removeSymbols = (string) => {
   } else {
     return string
   }
+  // return typeof string === 'string' ? string.replaceAll(REGEX,'') : string
 }
 
 /**
@@ -75,14 +76,31 @@ const readOneFullObject = (data) => {
   return data[0]
 }
 
+const isDate = (date) => {
+  return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
+}
+
+/**
+ * @title Convert date format to local date format.
+ * @param {Date} date Date written in any manner, returns date in local date format. 
+ * @returns {String} local date format in the datatype string
+ */
 const americanToUniversalDateFormat = (date) => {
-  let test = new Date(date)
-  console.log(test)
-  console.log(test.toLocaleDateString())
+  // const dateIsTrue = isDate(date)
+  // console.log(dateIsTrue)
+  // console.log(date)
+  let checkDate = new Date(date)
+  console.log(`test ${checkDate}`)
+  // console.log(Date.toString())
+  // return !isNaN(Date.parse(test)) ? test.toLocaleDateString() : date
+  // console.log(test)
+  // console.log(test.toLocaleDateString())
   // console.log(test.toString(test.getDate(), test.getMonth(), test.getFullYear()))
   // test.value.split("-").reverse().join("-"); 
   // console.log(test)
-  return test
+  // return test.toLocaleDateString()
+  // return isDate(date) ? date.toLocaleDateString() : date
+  return isDate(checkDate) ? checkDate.toLocaleDateString() : checkDate
 }
 
 exports.getData = getData
