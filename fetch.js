@@ -34,12 +34,12 @@ const getCurrentlyPlaying = async () => {
 }
 
 /**
- * @title msg function that 
- * @returns a message in the console with the data
+ * @title Return data in the console
+ * @param {Promise} data Object returned by a promise
  */
-const msg = async () => {
-  const msg = await getCurrentlyPlaying()
-  console.log(msg)
+const msg = async (data) => {
+  const msg = await data
+  return console.log(msg)
 }
 
-msg()
+msg(getCurrentlyPlaying())
