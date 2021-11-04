@@ -8,7 +8,7 @@ const utilities = require('./modules/util')
 const DATASET = require('./tech-track-dataset.json')
 const SAMPLE = require('./sample.json')
 
-/* 
+/*
   Get all entries with specific question
   Currently console logs instead of returning it
 */
@@ -62,7 +62,7 @@ sanitizeData()
   })
   .then(sanitizedData => {
     console.log(sanitizedData)
-    /* 
+    /*
     // Object in story format
     return sanitizedData.map(obj => {
       console.log(`persoon met oogkleur ${obj.oogkleur} vind zuivel product ${obj.zuivel} lekker in ${obj.wind} wind`)
@@ -73,6 +73,6 @@ sanitizeData()
     console.error(error)
   })
   .finally(() => {
-    console.log(`%c sanitization is finished.`,`color:yellow; font-weight:bold;`)
+    console.log('%c sanitization is finished.', 'color:yellow; font-weight:bold;')
   })
 // console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
