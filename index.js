@@ -8,6 +8,7 @@ const utilities = require('./modules/util')
 const DATASET = require('./tech-track-dataset.json')
 const SAMPLE = require('./sample.json')
 
+
 /*
   Get all entries with specific question
   Currently console logs instead of returning it
@@ -76,3 +77,5 @@ sanitizeData()
     console.log('%c sanitization is finished.', 'color:yellow; font-weight:bold;')
   })
 // console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
+
+console.log(utilities.toLocalDateFormat(getSpecificDataValue(1, 'Wat is je favoriete datum?')))
