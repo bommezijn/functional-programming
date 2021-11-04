@@ -25,7 +25,7 @@ const getAllValuesFromQuestion = (question) => {
  * @returns
  */
 const getSpecificDataValue = (key, value) => {
-  return DATASET[key][value]
+  return SAMPLE[key][value]
 }
 
 /*
@@ -78,4 +78,4 @@ sanitizeData()
   })
 // console.log(utilities.replaceEmptyValue(getAllValuesFromQuestion('Wat is je oogkleur?')))
 
-console.log(utilities.toLocalDateFormat(getSpecificDataValue(1, 'Wat is je favoriete datum?')))
+console.log(`American date "2021-02-09" to universal date: ${utilities.toLocalDateFormat(getSpecificDataValue(1, 'Wat is je favoriete datum?'))}`)
