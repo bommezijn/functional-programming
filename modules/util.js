@@ -9,12 +9,6 @@ const fetch = require('cross-fetch')
  * @param {String} string URL to the API
  * @returns {Object} Data object in JSON format
  */
-// const getData = async (URL) => {
-//   return await fetch(URL)
-//     .then(response => response.json())
-//     .catch(error => console.error(error))
-// }
-
 const getData = async (URL) => {
   try {
     let response = await fetch(URL)
